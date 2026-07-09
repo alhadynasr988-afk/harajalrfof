@@ -1,6 +1,6 @@
 const storeConfig = {
   whatsappNumber: "966534879245",
-  companyName: "حراج الرفوف السعودي",
+  companyName: "حراج الرفوف السعودية",
   defaultMessage: "مرحباً، أنا اريد شراء هذا المنتج: ",
 };
 

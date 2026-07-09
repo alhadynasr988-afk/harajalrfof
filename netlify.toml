@@ -14,3 +14,5 @@ publish = "."
   from = "/old-page"
   to = "/"
   status = 301
+
+
