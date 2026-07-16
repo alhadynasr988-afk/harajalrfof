@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+
+locale: ar
+local_backend: true
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+slug:
+  encoding: unicode
+  clean_accents: false
+
+collections:
+  - name: posts
+    label: المقالات
+    label_singular: مقال
+    folder: posts
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields:
+      fields: [date, title]
+      default:
+        field: date
+        direction: Descending
+    fields:
+      - label: العنوان
+        name: title
+        widget: string
+      - label: تاريخ النشر
+        name: date
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: HH:mm
+        format: YYYY-MM-DDTHH:mm:ssZ
+      - label: المحتوى
+        name: body
+        widget: markdown
