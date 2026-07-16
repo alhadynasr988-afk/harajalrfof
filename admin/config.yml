@@ -22,11 +22,8 @@ collections:
     format: frontmatter
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} — {{date}}"
-    sortable_fields:
-      fields: [date, title]
-      default:
-        field: date
-        direction: Descending
+    sortable_fields: ["date", "title"]
+
     fields:
       - label: العنوان
         name: title
