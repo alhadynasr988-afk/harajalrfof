@@ -1,7 +1,12 @@
 [build]
 
-command = ""
+command = "node scripts/build-blog.mjs"
 publish = "."
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
 
 [[headers]]
   for = "/*"
@@ -11,8 +16,12 @@ publish = "."
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+
+[[redirects]]
   from = "/old-page"
   to = "/"
   status = 301
-
 
