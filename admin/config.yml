@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  branch: main  
 
 locale: ar
 local_backend: true
